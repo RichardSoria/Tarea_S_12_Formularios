@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta</title>
+    <link rel="stylesheet" href="styles/encuesta.css">
+</head>
+<body>
+    <div class="container">
+        <div class="elemento_1">
+            <h1>Encuesta del Estudiante</h1>
+            <form id="form_encuesta" action="prueba.html">
+                <label for="nombre">Ingrese su nombre:</label>
+                <input type="text" id="nombre" placeholder="Nombre">
+                <span id="nombre_vacio"></span>
+
+                <label>Ingrese su género:</label>
+                <div>
+                    <div>
+                        <input type="radio" name="genero" id="masculino" value="masculino">
+                        <label for="masculino">Masculino</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="genero" id="femenino" value="femenino">
+                        <label for="femenino">Femenino</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="genero" id="otro" value="otro">
+                        <label for="otro">Otro</label>
+                    </div>
+                </div>
+                <span id="genero_vacio"></span>
+
+                <label for="edad">Ingrese su edad:</label>
+                <input type="number" id="edad" placeholder="Edad">
+                <span id="edad_aviso"></span>
+
+                <label for="correo">Ingrese su correo electrónico:</label>
+                <input type="email" id="correo" placeholder="Correo Electrónico">
+                <span id="correo_aviso"></span>
+
+                <label for="pais">Ingrese su país de residencia</label>
+                <input type="text" id="pais" placeholder="País de residencia">
+                <span id="pais_vacio"></span>
+
+                <label for="gustos">Ingrese sus gustos/hobbies:</label>
+                <textarea name="gustos" id="gustos" cols="30" rows="10" placeholder="Gustos/Hobbies"></textarea>
+                <span id="gustos_aviso"></span>
+
+                <label for="curso">Elija un curso:</label>
+                <select name="curso" id="curso">
+                    <option value="seleccionar">Seleccionar...</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScript</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                </select>
+                <span id="curso_aviso"></span>
+
+                <label for="duracion">Elija la duración del curso (Entre 10 a 30 horas):</label>
+                <input type="number" id="duracion" placeholder="Duración del curso">
+                <span id="duracion_aviso"></span>
+
+                <button type="submit" id="boton_encuesta">Enviar Formulario</button>
+            </form>
+        </div>
+    </div>
+    <script src="encuesta.js"></script>
+</body>
+</html>

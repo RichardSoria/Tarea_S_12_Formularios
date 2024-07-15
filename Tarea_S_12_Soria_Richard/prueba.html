@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+    <link rel="stylesheet" href="styles/prueba.css">
+</head>
+<body>
+    <div class="container">
+        <div class="elemento_1">
+            <h1>Prueba</h1>
+            <form id="form_encuesta" onsubmit="calcularResultados(event)">
+                
+                <label for="pregunta1">Cantidad de hosts que tiene una máscara de 24 bits:</label>
+                <input type="text" id="pregunta1" name="pregunta1" placeholder="Ingrese su respuesta">
+                <span id="pregunta1_vacio"></span>
+
+                <label>¿Una máscara 255.0.0.0 maneja 128 redes?</label>
+                <div>
+                    <div>
+                        <input type="radio" name="pregunta2" id="verdadero" value="verdadero">
+                        <label for="verdadero">Verdadero</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="pregunta2" id="falso" value="falso">
+                        <label for="falso">Falso</label>
+                    </div>
+                </div>
+                <span id="pregunta2_vacio"></span>
+
+                <label for="pregunta3">¿Cuál es el rango de una red clase C?</label>
+                <select name="pregunta3" id="pregunta3">
+                    <option value="seleccionar">Seleccionar...</option>
+                    <option value="192.0.0.0 - 223.255.255.255">192.0.0.0 - 223.255.255.255</option>
+                    <option value="128.0.0.0 - 191.255.255.255">128.0.0.0 - 191.255.255.255</option>
+                    <option value="224.0.0.0 - 239.255.255.255">224.0.0.0 - 239.255.255.255</option>
+                </select>
+                <span id="pregunta3_vacio"></span>
+
+                <label for="pregunta4">¿Cuáles de las siguientes son direcciones IP válidas? (Seleccione todas las correctas)</label>
+                <div>
+                    <div>
+                        <input type="checkbox" name="pregunta4" id="ip1" value="192.168.1.1">
+                        <label for="ip1">192.168.1.1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="pregunta4" id="ip2" value="256.256.256.256">
+                        <label for="ip2">256.256.256.256</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="pregunta4" id="ip3" value="172.16.0.1">
+                        <label for="ip3">172.16.0.1</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="pregunta4" id="ip4" value="300.300.300.300">
+                        <label for="ip4">300.300.300.300</label>
+                    </div>
+                </div>
+                <span id="pregunta4_vacio"></span>
+
+                <label for="pregunta5">Describa brevemente las diferencias entre IPv4 e IPv6:</label>
+                <textarea id="pregunta5" name="pregunta5" placeholder="Ingrese su respuesta"></textarea>
+                <span id="pregunta5_vacio"></span>
+                <button type="submit" id="boton_encuesta">Culminar Evaluación</button>
+            </form>
+            <div id="resultados" class="resultados"></div>
+        </div>
+    </div>
+    <script src="prueba.js"></script>
+</body>
+</html>
